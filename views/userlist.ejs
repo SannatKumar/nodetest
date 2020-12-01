@@ -6,7 +6,20 @@
   </head>
   <body>
     <h1>User List</h1>
-    <ul>
+    <table id="users">
+      <tr>
+        <th>User Name</th>
+        <th>Email</th>
+        </tr>
+        <%
+        var list = '';
+        for (i = 0; i < userlist.length; i++) {
+          list += '<tr><td>'+ userlist[i].email + '</td>' + '<td>' + userlist[i].username + '</td></tr>';
+        }
+      %>
+      <%- list %>
+      
+      <!--
       <%
         var list = '';
         for (i = 0; i < userlist.length; i++) {
@@ -14,6 +27,7 @@
         }
       %>
       <%- list %>
-    </ul>
+      -->
+      </table>
   </body>
 </html>
